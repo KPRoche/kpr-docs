@@ -16,7 +16,7 @@ export const NETLIFY_SITE_NAME = "kubestellar-docs"
 export const PRODUCTION_URL = "https://kubestellar.io"
 
 // Project identifiers
-export type ProjectId = "kubestellar" | "a2a" | "kubeflex" | "multi-plugin" | "kubestellar-mcp" | "console"
+export type ProjectId = "console" |"kubestellar" | "a2a" | "kubeflex" | "multi-plugin" | "kubestellar-mcp" | "contribute"
 
 // Version info structure
 export interface VersionInfo {

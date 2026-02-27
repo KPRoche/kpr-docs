@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
+import { Link } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { ChevronRight, ChevronDown, Moon, Sun, PanelLeftOpen } from 'lucide-react';
@@ -115,12 +116,14 @@ export function RelatedProjects({ variant = 'full', onCollapse, bannerActive = f
 
   // Determine current project from pathname
   // THIS HIGHLIGHTS THE ACTIVE PROJECT IN THE PROJECT LIST IN THE SIDEBAR
+   // Determine current project from pathname
   const getCurrentProject = () => {
-    if (pathname.startsWith('/docs/console')) return 'Console';
+    if (pathname.startsWith('docs/contribution-guidelines')) return 'Contribute';
     if (pathname.startsWith('/docs/a2a')) return 'A2A';
     if (pathname.startsWith('/docs/kubeflex')) return 'KubeFlex';
     if (pathname.startsWith('/docs/multi-plugin')) return 'Multi Plugin';
     if (pathname.startsWith('/docs/kubestellar-mcp')) return 'KubeStellar MCP';
+    if (pathname.startsWith('/docs/console')) return 'Console';
     return 'KubeStellar';
   };
 
@@ -214,7 +217,7 @@ export function RelatedProjects({ variant = 'full', onCollapse, bannerActive = f
 
                 return (
                   <div key={project.title}>
-                    <a
+                    <Link
                       href={projectUrl}
                       suppressHydrationWarning
                       className={`block px-3 text-sm rounded-md transition-colors ${bannerActive ? 'py-0.5' : 'py-2'} ${isCurrentProject ? 'font-medium' : ''}`}
@@ -228,7 +231,7 @@ export function RelatedProjects({ variant = 'full', onCollapse, bannerActive = f
                       onMouseLeave={() => setHoveredProject(null)}
                     >
                       {project.title}
-                    </a>
+                    </Link>
                     {/* Render legacy project nav items inline */}
                     {isCurrentProject && legacyPageMap && legacyPageMap.length > 0 && (
                       <div className="ml-4 mt-1 space-y-0.5 border-l border-gray-700/50 pl-2">

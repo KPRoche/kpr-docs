@@ -20,6 +20,8 @@ export function getContentPath(projectId: ProjectId): string {
       return path.join(process.cwd(), 'docs', 'content', 'kubestellar-mcp')
     case 'console':
       return path.join(process.cwd(), 'docs', 'content', 'console')
+     case 'contribute':
+      return path.join(process.cwd(), 'docs', 'content', 'contribution-guidelines')
     default:
       return docsContentPath
   }
@@ -38,6 +40,8 @@ export function getBasePath(projectId: ProjectId): string {
       return 'docs/kubestellar-mcp'
     case 'console':
       return 'docs/console'
+    case 'contribute':
+      return 'docs/contribution-guidelines'
     default:
       return 'docs'
   }
@@ -303,8 +307,12 @@ const NAV_STRUCTURE: Array<{ title: string; items: NavItem[] }> = [
       },
       { 'Teardown': 'kubestellar/teardown.md' }
     ]
-  },
-  {
+  }
+]
+
+// KubeStellar Navigation Structure
+const NAV_STRUCTURE_CONTRIBUTE: Array<{ title: string; items: NavItem[] }> = [
+ {
     title: 'Contributing',
     items: [
       { 'Overview': 'contribution-guidelines/contribute.md' },
@@ -378,6 +386,8 @@ function getNavStructure(projectId: ProjectId): Array<{ title: string; items: Na
       return NAV_STRUCTURE_KUBESTELLAR_MCP
     case 'console':
       return NAV_STRUCTURE_CONSOLE
+    case 'contribute':
+      return NAV_STRUCTURE_CONTRIBUTE
     default:
       return NAV_STRUCTURE
   }
