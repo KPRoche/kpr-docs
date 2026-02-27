@@ -205,7 +205,7 @@
   },
   "relatedProjects": [
     {
-      "title": "Console",
+      "title": "KubeStellar Console",
       "href": "/docs/console/readme",
       "description": "AI-powered multi-cluster dashboard"
     },
@@ -219,6 +219,11 @@
       "href": "/docs/a2a/overview/introduction",
       "description": "Agent-to-Agent protocol"
     },
+    {
+      "title": "Contribute",
+      "href": "/docs/contribution-guidelines/contribute.md",
+      "description": "Contributing to KubeStellar and its Docs"
+    }
     {
       "title": "KubeStellar",
       "href": "/docs/what-is-kubestellar/overview",
@@ -235,12 +240,6 @@
       "title": "Multi Plugin",
       "href": "/docs/multi-plugin/overview/introduction",
       "description": "Multi-cluster kubectl plugin",
-      "legacy": true
-    }
-        {
-      "title": "Contribute",
-      "href": "/docs/contribution-guidelines/contribute.md",
-      "description": "Contributing to KubeStellar and its Docs",
       "legacy": true
     }
   ],
