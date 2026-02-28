@@ -207,28 +207,32 @@
     {
       "title": "KubeStellar Console",
       "href": "/docs/console/readme",
-      "description": "AI-powered multi-cluster dashboard"
+      "description": "AI-powered multi-cluster dashboard",
+      "legacy":false
     },
     {
       "title": "KubeStellar MCP",
       "href": "/docs/kubestellar-mcp/overview/introduction",
-      "description": "AI-powered Kubernetes MCP tools"
+      "description": "AI-powered Kubernetes MCP tools",
+      "legacy":false
     },
     {
       "title": "A2A",
       "href": "/docs/a2a/overview/introduction",
-      "description": "Agent-to-Agent protocol"
+      "description": "Agent-to-Agent protocol",
+      "legacy":false
     },
     {
-      "title": "Contribute",
-      "href": "/docs/contribution-guidelines/contribute.md",
-      "description": "Contributing to KubeStellar and its Docs"
-    }
+      "title": "Contribute to KubeStellar",
+      "href": "/docs/contributing/contribute.md",
+      "description": "Contributing to KubeStellar and its Docs",
+      "legacy": false
+    },    
     {
       "title": "KubeStellar",
       "href": "/docs/what-is-kubestellar/overview",
       "description": "Multi-cluster configuration management",
-      "legacy": true
+      "legacy": false
     },
     {
       "title": "KubeFlex",
@@ -250,7 +254,7 @@
     "kubeflex": "https://github.com/kubestellar/kubeflex/edit/main/docs",
     "multi-plugin": "https://github.com/kubestellar/docs/edit/main/docs/content/multi-plugin",
     "kubestellar-mcp": "https://github.com/kubestellar/kubestellar-mcp/edit/main/docs",
-    "contribute": "https://github.com/kubestellar/docs/edit/main/docs/content/contribution-guidelines",
+    "contribute": "https://github.com/kubestellar/docs/edit/main/docs/content/contribution-guidelines"
   },
   "updatedAt": "2026-01-16T18:24:27.434Z"
 }

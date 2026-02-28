@@ -250,11 +250,11 @@ export function DocsSidebar({ pageMap, className, projectId }: DocsSidebarProps)
       {/* Scrollable navigation area */}
       <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden">
         <RelatedProjects bannerActive={!bannerDismissed} legacyPageMap={isLegacyProject ? pageMap : undefined} />
-        {!isLegacyProject && (
+        {/*{!isLegacyProject && ( */}
           <nav className="px-4 pt-2 pb-6 w-full space-y-1.5">
             {pageMap.map(item => renderMenuItem(item))}
           </nav>
-        )}
+        {/*})*/}
       </div>
       <SidebarFooter onCollapse={toggleSidebar} isMobile={menuOpen} />
     </>

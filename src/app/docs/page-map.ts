@@ -41,7 +41,7 @@ export function getBasePath(projectId: ProjectId): string {
     case 'console':
       return 'docs/console'
     case 'contribute':
-      return 'docs/contribution-guidelines'
+      return 'docs/contributing'
     default:
       return 'docs'
   }

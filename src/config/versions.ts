@@ -268,6 +268,14 @@ export const PROJECTS: Record<ProjectId, ProjectConfig> = {
     contentPath: "docs/content/console",
     versions: CONSOLE_VERSIONS,
   },
+    "contribute": {
+    id: "contribute",
+    name: "Contribute",
+    basePath: "contributing",
+    currentVersion: "",
+    contentPath: "docs/content/contribution-guidelines",
+    versions: CONSOLE_VERSIONS
+  },
 }
 
 // Get project from URL pathname

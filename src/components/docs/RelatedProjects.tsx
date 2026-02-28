@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { ChevronRight, ChevronDown, Moon, Sun, PanelLeftOpen } from 'lucide-react';
 import { useSharedConfig } from '@/hooks/useSharedConfig';
+import { Fascinate_Inline } from 'next/font/google';
 
 // Production URL - all cross-project links go here
 const PRODUCTION_URL = 'https://kubestellar.io';
@@ -13,8 +14,8 @@ const PRODUCTION_URL = 'https://kubestellar.io';
 // Generic fallback for related projects - uses safe URLs that won't break
 // The actual project list is fetched from production config
 const STATIC_RELATED_PROJECTS = [
-  { title: 'Console', href: '/docs/console', description: 'AI-enabled multi-cluster management' },
-  { title: 'Loading projects...', href: '/docs', description: 'Fetching from config' },
+  { title: 'Console', href: '/docs/console', description: 'AI-enabled multi-cluster management', legacy: false },
+  { title: 'Loading projects...', href: '/docs', description: 'Fetching from config', legacy: false },
 ];
 
 interface LegacyMenuItem {
@@ -118,12 +119,12 @@ export function RelatedProjects({ variant = 'full', onCollapse, bannerActive = f
   // THIS HIGHLIGHTS THE ACTIVE PROJECT IN THE PROJECT LIST IN THE SIDEBAR
    // Determine current project from pathname
   const getCurrentProject = () => {
-    if (pathname.startsWith('docs/contribution-guidelines')) return 'Contribute';
+    if (pathname.startsWith('docs/contributing')) return 'Contribute to KubeStellar';
     if (pathname.startsWith('/docs/a2a')) return 'A2A';
     if (pathname.startsWith('/docs/kubeflex')) return 'KubeFlex';
     if (pathname.startsWith('/docs/multi-plugin')) return 'Multi Plugin';
     if (pathname.startsWith('/docs/kubestellar-mcp')) return 'KubeStellar MCP';
-    if (pathname.startsWith('/docs/console')) return 'Console';
+    if (pathname.startsWith('/docs/console')) return 'KubeStellar Console';
     return 'KubeStellar';
   };
 
@@ -230,7 +231,7 @@ export function RelatedProjects({ variant = 'full', onCollapse, bannerActive = f
                       onMouseEnter={() => !isCurrentProject && setHoveredProject(project.title)}
                       onMouseLeave={() => setHoveredProject(null)}
                     >
-                      {project.title}
+                      Legacy: {project.title}
                     </Link>
                     {/* Render legacy project nav items inline */}
                     {isCurrentProject && legacyPageMap && legacyPageMap.length > 0 && (
